@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMARTLINK Property Management</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -12,6 +13,8 @@
       background-color: #ffffff;
       color: #1a1a1a;
       line-height: 1.6;
+      overflow-x: hidden;
+      cursor: none;
     }
     header {
       background-color: #0b2e59;
@@ -29,15 +32,22 @@
       font-size: 1.2rem;
     }
     section {
-      padding: 2rem 1rem;
+      padding: 4rem 1rem;
       max-width: 1100px;
       margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
     }
     section img {
-      max-width: 100%;
+      flex: 1 1 40%;
+      max-width: 500px;
       height: auto;
-      margin-bottom: 1rem;
       border-radius: 8px;
+    }
+    section div {
+      flex: 1 1 50%;
     }
     h2 {
       color: #0b2e59;
@@ -61,6 +71,7 @@
       font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
     form button:hover {
       background-color: #e0b512;
@@ -89,63 +100,88 @@
       color: #ffffff;
       margin-top: 1rem;
     }
+    /* Cursor trail effect */
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-color: #f3c013;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="cursor"></div>
+
+  <header data-aos="fade-down">
     <h1>SMARTLINK Property Management</h1>
     <p>Smart Strategies, Linked Success</p>
   </header>
 
   <section>
-    <img src="images/smartlink-hotel-front-desk.jpg" alt="SMARTLINK Hotel Front Desk">
-    <h2>About SMARTLINK</h2>
-    <p>SMARTLINK is a premier commercial property management company specializing in hotels, apartments, and medical centers. We bring human excellence and operational precision to every property we manage, boosting occupancy, profitability, and guest satisfaction through superior systems and service.</p>
+    <img src="images/smartlink-hotel-front-desk.jpg" alt="SMARTLINK Hotel Front Desk" data-aos="fade-right">
+    <div data-aos="fade-left">
+      <h2>About SMARTLINK</h2>
+      <p>SMARTLINK is a premier commercial property management company specializing in hotels, apartments, and medical centers. We bring human excellence and operational precision to every property we manage, boosting occupancy, profitability, and guest satisfaction through superior systems and service.</p>
+    </div>
   </section>
 
   <section>
-    <img src="images/smartlink-housekeeping-team.jpg" alt="SMARTLINK Housekeeping Team">
-    <h2>Our Core Services</h2>
-    <ul>
-      <li>Hotel and multifamily full operational management</li>
-      <li>Housekeeping, maintenance, staff training, and scheduling</li>
-      <li>Pest control, plumbing, landscaping, event support</li>
-      <li>Revenue growth through corporate lodging contracts</li>
-      <li>Guest satisfaction and 5-star review strategies</li>
-    </ul>
+    <div data-aos="fade-right">
+      <h2>Our Core Services</h2>
+      <ul>
+        <li>Hotel and multifamily full operational management</li>
+        <li>Housekeeping, maintenance, staff training, and scheduling</li>
+        <li>Pest control, plumbing, landscaping, event support</li>
+        <li>Revenue growth through corporate lodging contracts</li>
+        <li>Guest satisfaction and 5-star review strategies</li>
+      </ul>
+    </div>
+    <img src="images/smartlink-housekeeping-team.jpg" alt="SMARTLINK Housekeeping Team" data-aos="fade-left">
   </section>
 
   <section>
-    <img src="images/smartlink-guest-5-star-review.jpg" alt="SMARTLINK Guest 5 Star Review">
-    <h2>Real Results We Deliver</h2>
-    <ul>
-      <li>Higher guest ratings and online reputation</li>
-      <li>Stronger occupancy rates year-round</li>
-      <li>Corporate partnerships for repeat business</li>
-      <li>Maximized property profitability and asset value</li>
-    </ul>
+    <img src="images/smartlink-guest-5-star-review.jpg" alt="SMARTLINK Guest 5 Star Review" data-aos="fade-right">
+    <div data-aos="fade-left">
+      <h2>Real Results We Deliver</h2>
+      <ul>
+        <li>Higher guest ratings and online reputation</li>
+        <li>Stronger occupancy rates year-round</li>
+        <li>Corporate partnerships for repeat business</li>
+        <li>Maximized property profitability and asset value</li>
+      </ul>
+    </div>
   </section>
 
   <section>
-    <img src="images/smartlink-hotel-conference-room.jpg" alt="SMARTLINK Hotel Conference Room">
-    <h2>Report an Issue (Internal Staff)</h2>
-    <p>If you're on-site and notice an operational concern, please report it immediately:</p>
-    <button class="report-btn" onclick="alert('Internal report system coming soon. Please call management.')">Report a Problem</button>
+    <div data-aos="fade-right">
+      <h2>Report an Issue (Internal Staff)</h2>
+      <p>If you're on-site and notice an operational concern, please report it immediately:</p>
+      <button class="report-btn" onclick="alert('Internal report system coming soon. Please call management.')">Report a Problem</button>
+    </div>
+    <img src="images/smartlink-hotel-conference-room.jpg" alt="SMARTLINK Hotel Conference Room" data-aos="fade-left">
   </section>
 
   <section>
-    <h2>Contact Us</h2>
-    <p>Let SMARTLINK elevate your property to its highest potential.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>Let SMARTLINK elevate your property to its highest potential.</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
-  <div class="cta">
+  <div class="cta" data-aos="zoom-in">
     <a href="#contact">Request a Proposal</a>
   </div>
 
@@ -153,5 +189,14 @@
     &copy; 2025 SMARTLINK Property Management | All Rights Reserved
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.top = e.clientY + 'px';
+      cursor.style.left = e.clientX + 'px';
+    });
+  </script>
 </body>
 </html>
