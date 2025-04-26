@@ -4,23 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMARTLINK Property Management</title>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMARTLINK Property Management</title>
-
-  <!-- Favicon link goes here -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- (Optional) Your CSS link, fonts, scripts would come after -->
-  <style>
-    /* Your page styles */
-  </style>
-</head>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       background-color: #ffffff;
       color: #1a1a1a;
@@ -38,15 +26,23 @@
     header p {
       font-size: 1.2rem;
       margin-top: 0.5rem;
-      color: #d0d0d0;
+      color: #f3c013;
     }
     section {
       padding: 2rem 1rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
     }
     section h2 {
       color: #0b2e59;
+      margin-bottom: 1rem;
+    }
+    section p, section ul {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
     }
     .cta {
       text-align: center;
@@ -67,6 +63,18 @@
       text-align: center;
       font-size: 0.9rem;
     }
+    button {
+      background-color: #f3c013;
+      color: #0b2e59;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e0b512;
+    }
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
     }
@@ -75,54 +83,55 @@
 <body>
   <header>
     <h1>SMARTLINK Property Management</h1>
-    <p>Smart Strategies. Linked Success.</p>
+    <p>Where Human Excellence Meets Operational Precision</p>
   </header>
 
   <section>
-    <h2>Our Expertise: Hotel Property Management</h2>
-    <p>We specialize in helping hotel property owners enhance guest satisfaction, streamline operations, and unlock new revenue streams. SMARTLINK provides experienced staff management, operational efficiency, and trustworthy oversight — tailored for seasoned owners and investors.</p>
+    <h2>About SMARTLINK</h2>
+    <p>SMARTLINK is more than property management — it's a human-first operations company that builds powerful, resilient, profitable assets. Our leadership combines decades of experience in complex labor operations, tactical planning, and hands-on hotel ownership. We don't just install systems; we create environments where your staff thrives, your guests rave, and your property becomes a community pillar.</p>
   </section>
 
   <section>
-    <h2>Integrated Management Services</h2>
+    <h2>Our Core Services</h2>
     <ul>
-      <li>Investor Dashboards & Real-Time Reporting</li>
-      <li>Onboarding New Properties & Team Setup</li>
-      <li>Maintenance Scheduling & Work Order Automation</li>
-      <li>Guest Experience Optimization & Cleanliness Verification</li>
-      <li>Staffing Strategy, Training & Accountability</li>
+      <li>Daily housekeeping excellence and room inspections</li>
+      <li>Facilities maintenance and leak/pest rapid response systems</li>
+      <li>Staff scheduling, training, and morale development</li>
+      <li>Occupancy growth and revenue optimization strategies</li>
+      <li>Corporate account acquisition for steady business lodging</li>
+      <li>Smart guest escalation handling (for complaints, events, emergencies)</li>
     </ul>
   </section>
 
   <section>
-    <h2>Diverse Property Coverage</h2>
-    <p>While hotels are our primary focus, SMARTLINK’s tools can be used to manage:</p>
+    <h2>How We Deliver Real Results</h2>
     <ul>
-      <li>Commercial Office Spaces</li>
-      <li>Multifamily & Student Housing</li>
-      <li>Community Associations (HOAs)</li>
-      <li>Government & School Buildings</li>
-      <li>Industrial & Mixed-Use Properties</li>
+      <li><strong>Improve Online Reviews:</strong> Smoother operations and faster problem resolution drive 5-star ratings and positive guest feedback.</li>
+      <li><strong>Boost Occupancy:</strong> Operational excellence and brand reputation fill more rooms, more often.</li>
+      <li><strong>Win Corporate Accounts:</strong> Professional appearance and service consistency make us a preferred lodging partner for businesses.</li>
+      <li><strong>Increase Profitability:</strong> Smarter workflows, reduced waste, better energy use, and upsell programs grow your bottom line.</li>
     </ul>
   </section>
 
   <section>
-    <h2>New Revenue Opportunities</h2>
-    <p>We install modular amenities to increase value and profitability:</p>
-    <ul>
-      <li>Fitness Containers, Saunas, Pools</li>
-      <li>Coffee Kiosks, Bars, Micro Delis</li>
-      <li>Shared ROI Models with Owners</li>
-    </ul>
+    <h2>Report an Issue (Internal Staff)</h2>
+    <p>If you're on-site and notice a leak, pest concern, trash overflow, or guest escalation, report it immediately:</p>
+    <button onclick="alert('Internal Report Module Coming Soon')">Report a Problem</button>
   </section>
 
   <section>
-    <h2>Reviews & Visibility</h2>
-    <p>We integrate reviews from platforms like Google, Booking.com, and Yelp, helping property owners stay informed and improve their reputation.</p>
+    <h2>Contact Us</h2>
+    <p>Partner with a management company that understands the real work behind operational excellence.</p>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br><br>
+      <input type="email" name="email" placeholder="Your Email" required><br><br>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <div class="cta">
-    <p><strong>Want to learn how SMARTLINK can help manage and grow your property?</strong></p>
+    <p><strong>Let's Build Something Extraordinary Together.</strong></p>
     <a href="#">Request a Proposal</a>
   </div>
 
