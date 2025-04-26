@@ -28,7 +28,7 @@
     }
     header p {
       margin-top: 0.5rem;
-      color: #f3c013;
+      color: #C5B358;
       font-size: 1.2rem;
     }
     section {
@@ -64,7 +64,7 @@
       border-radius: 5px;
     }
     form button {
-      background-color: #f3c013;
+      background-color: #C5B358;
       color: #0b2e59;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -74,14 +74,14 @@
       transition: background-color 0.3s;
     }
     form button:hover {
-      background-color: #e0b512;
+      background-color: #b4a04d;
     }
     .cta {
       text-align: center;
       margin: 3rem 0;
     }
     .cta a {
-      background-color: #f3c013;
+      background-color: #C5B358;
       color: #0b2e59;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
@@ -105,13 +105,30 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 15px;
-      height: 15px;
-      background-color: #f3c013;
+      width: 10px;
+      height: 10px;
+      background-color: #C5B358;
       border-radius: 50%;
       pointer-events: none;
       transform: translate(-50%, -50%);
       z-index: 9999;
+      box-shadow: 0 0 20px #C5B358, 0 0 40px #C5B358, 0 0 60px #C5B358;
+      opacity: 0.8;
+    }
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 1rem;
+    }
+    .brand-logos img {
+      max-width: 150px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    .brand-logos img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -161,11 +178,16 @@
 
   <section>
     <div data-aos="fade-right">
-      <h2>Report an Issue (Internal Staff)</h2>
-      <p>If you're on-site and notice an operational concern, please report it immediately:</p>
-      <button class="report-btn" onclick="alert('Internal report system coming soon. Please call management.')">Report a Problem</button>
+      <h2>Brands We Support, Partner With, or Aspire to Serve</h2>
+      <div class="brand-logos">
+        <img src="images/wyndham-logo.png" alt="Wyndham Hotels">
+        <img src="images/marriott-logo.png" alt="Marriott Hotels">
+        <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton Hotels">
+        <img src="images/cbre-logo.png" alt="CBRE">
+        <img src="images/greystar-logo.png" alt="Greystar">
+        <img src="images/cushman-wakefield-logo.png" alt="Cushman and Wakefield">
+      </div>
     </div>
-    <img src="images/smartlink-hotel-conference-room.jpg" alt="SMARTLINK Hotel Conference Room" data-aos="fade-left">
   </section>
 
   <section>
