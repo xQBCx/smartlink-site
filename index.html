@@ -22,6 +22,11 @@
       text-align: center;
       padding: 2rem 1rem;
     }
+    header img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
     header h1 {
       margin: 0;
       font-size: 2.5rem;
@@ -95,12 +100,6 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-    button.report-btn {
-      background-color: #0b2e59;
-      color: #ffffff;
-      margin-top: 1rem;
-    }
-    /* Cursor trail effect */
     .cursor {
       position: fixed;
       top: 0;
@@ -137,6 +136,7 @@
   <div class="cursor"></div>
 
   <header data-aos="fade-down">
+    <img src="images/SMARTLINK-logo.png" alt="SMARTLINK Logo">
     <h1>SMARTLINK Property Management</h1>
     <p>Smart Strategies, Linked Success</p>
   </header>
@@ -145,55 +145,52 @@
     <img src="images/smartlink-hotel-front-desk.jpg" alt="SMARTLINK Hotel Front Desk" data-aos="fade-right">
     <div data-aos="fade-left">
       <h2>About SMARTLINK</h2>
-      <p>SMARTLINK is a premier commercial property management company specializing in hotels, apartments, and medical centers. We bring human excellence and operational precision to every property we manage, boosting occupancy, profitability, and guest satisfaction through superior systems and service.</p>
+      <p>SMARTLINK is a premier commercial property management company specializing in hotels, apartments, and medical centers. We deliver precision operations, maximize guest satisfaction, and elevate property profitability with world-class service systems.</p>
     </div>
   </section>
 
   <section>
     <div data-aos="fade-right">
-      <h2>Our Core Services</h2>
+      <h2>Core Services</h2>
       <ul>
-        <li>Hotel and multifamily full operational management</li>
-        <li>Housekeeping, maintenance, staff training, and scheduling</li>
-        <li>Pest control, plumbing, landscaping, event support</li>
-        <li>Revenue growth through corporate lodging contracts</li>
-        <li>Guest satisfaction and 5-star review strategies</li>
+        <li>Full hotel and apartment operational management</li>
+        <li>Maintenance, staffing, linens, registration systems</li>
+        <li>Guest satisfaction systems and online review management</li>
+        <li>Corporate account partnerships to boost occupancy</li>
+        <li>Profitability-driven upgrades and management reporting</li>
       </ul>
     </div>
-    <img src="images/smartlink-housekeeping-team.jpg" alt="SMARTLINK Housekeeping Team" data-aos="fade-left">
+    <img src="images/smartlink-housekeeping-team.jpg" alt="Housekeeping Excellence" data-aos="fade-left">
   </section>
 
   <section>
-    <img src="images/smartlink-guest-5-star-review.jpg" alt="SMARTLINK Guest 5 Star Review" data-aos="fade-right">
+    <img src="images/smartlink-guest-5-star-review.jpg" alt="Guest Reviews Boost" data-aos="fade-right">
     <div data-aos="fade-left">
-      <h2>Real Results We Deliver</h2>
+      <h2>Delivering Real Results</h2>
       <ul>
-        <li>Higher guest ratings and online reputation</li>
-        <li>Stronger occupancy rates year-round</li>
-        <li>Corporate partnerships for repeat business</li>
-        <li>Maximized property profitability and asset value</li>
+        <li>Higher occupancy, repeat guest loyalty</li>
+        <li>5-star guest ratings and online reputation management</li>
+        <li>Revenue growth with minimal capital risk</li>
+        <li>Custom owner and investor reporting portals</li>
       </ul>
     </div>
   </section>
 
   <section>
-    <div data-aos="fade-right">
-      <h2>Brands We Support, Partner With, or Aspire to Serve</h2>
-      <div class="brand-logos">
-        <img src="images/wyndham-logo.png" alt="Wyndham Hotels">
-        <img src="images/marriott-logo.png" alt="Marriott Hotels">
-        <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton Hotels">
-        <img src="images/cbre-logo.png" alt="CBRE">
-        <img src="images/greystar-logo.png" alt="Greystar">
-        <img src="images/cushman-wakefield-logo.png" alt="Cushman and Wakefield">
-      </div>
+    <h2 data-aos="fade-up">Current and Aspirational Brand Partnerships</h2>
+    <div class="brand-logos">
+      <img src="images/wyndham-logo.png" alt="Wyndham">
+      <img src="images/marriott-logo.png" alt="Marriott">
+      <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton">
+      <img src="images/cbre-logo.png" alt="CBRE">
+      <img src="images/greystar-logo.png" alt="Greystar">
+      <img src="images/cushman-wakefield-logo.png" alt="Cushman and Wakefield">
     </div>
   </section>
 
   <section>
     <div data-aos="fade-up">
       <h2>Contact Us</h2>
-      <p>Let SMARTLINK elevate your property to its highest potential.</p>
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -220,5 +217,6 @@
       cursor.style.left = e.clientX + 'px';
     });
   </script>
+
 </body>
 </html>
