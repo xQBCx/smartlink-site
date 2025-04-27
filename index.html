@@ -10,18 +10,21 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #ffffff url('images/subtle-texture.png') repeat;
+      background-color: #ffffff;
       color: #1a1a1a;
       line-height: 1.6;
       overflow-x: hidden;
       cursor: none;
+      scroll-behavior: smooth;
     }
-    header, footer {
-      width: 100%;
+    header {
       background-color: #0b2e59;
       color: #ffffff;
       text-align: center;
       padding: 2rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
       margin: 0;
@@ -32,20 +35,13 @@
       color: #C5B358;
       font-size: 1.2rem;
     }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem 0;
-    }
     section {
       padding: 4rem 1rem;
-    }
-    .flex-wrap {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
       gap: 2rem;
     }
     section img {
@@ -54,11 +50,13 @@
       width: 100%;
       height: auto;
       border-radius: 8px;
-      object-fit: contain;
+      transition: transform 0.5s;
+    }
+    section div {
+      flex: 1 1 50%;
     }
     h2 {
       color: #0b2e59;
-      text-align: center;
     }
     ul {
       list-style: inside;
@@ -71,7 +69,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    form button, .cta a {
+    form button {
       background-color: #C5B358;
       color: #0b2e59;
       border: none;
@@ -80,101 +78,135 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
-      display: inline-block;
-      text-decoration: none;
     }
-    form button:hover, .cta a:hover {
+    form button:hover {
       background-color: #b4a04d;
+    }
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta a {
+      background-color: #C5B358;
+      color: #0b2e59;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #0b2e59;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-color: #C5B358;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      box-shadow: 0 0 10px #C5B358, 0 0 20px #C5B358, 0 0 30px #C5B358;
+      opacity: 0.8;
     }
     .brand-logos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
+      padding: 4rem 1rem;
     }
     .brand-logos img {
       max-width: 150px;
       width: 100%;
       height: auto;
-      object-fit: contain;
       transition: transform 0.3s;
     }
     .brand-logos img:hover {
       transform: scale(1.05);
     }
-    footer {
-      font-size: 0.9rem;
-      padding: 1rem;
-    }
-    .cursor {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      background-color: #C5B358;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      box-shadow: 0 0 20px #C5B358, 0 0 40px #C5B358, 0 0 60px #C5B358;
-      opacity: 0.8;
-    }
   </style>
 </head>
 <body>
+
   <div class="cursor"></div>
-  <header>
+
+  <header data-aos="fade-down">
     <h1>SMARTLINK Property Management</h1>
     <p>Smart Strategies, Linked Success</p>
   </header>
 
-  <div class="container">
-    <section class="flex-wrap">
-      <img src="images/smartlink-hotel-front-desk.jpg" alt="Hotel Front Desk">
-      <div>
-        <h2>About SMARTLINK</h2>
-        <p>SMARTLINK specializes in managing hotels, apartments, and medical centers with human excellence, boosting occupancy, profitability, and guest satisfaction through operational precision and care.</p>
-      </div>
-    </section>
+  <section>
+    <img src="images/smartlink-hotel-front-desk.jpg" alt="SMARTLINK Hotel Front Desk" data-aos="fade-right">
+    <div data-aos="fade-left">
+      <h2>About SMARTLINK</h2>
+      <p>SMARTLINK is a premier commercial property management company specializing in hotels, apartments, and medical centers. We bring human excellence and operational precision to every property we manage, boosting occupancy, profitability, and guest satisfaction through superior systems and service.</p>
+    </div>
+  </section>
 
-    <section class="flex-wrap">
-      <div>
-        <h2>Our Core Services</h2>
-        <ul>
-          <li>Full hotel and apartment operational management</li>
-          <li>Housekeeping, maintenance, staff scheduling and training</li>
-          <li>Issue management and emergency response protocols</li>
-          <li>5-star review and corporate account growth strategies</li>
-        </ul>
-      </div>
-      <img src="images/smartlink-housekeeping-team.jpg" alt="Housekeeping Team">
-    </section>
+  <section>
+    <div data-aos="fade-right">
+      <h2>Our Core Services</h2>
+      <ul>
+        <li>Hotel and multifamily full operational management</li>
+        <li>Housekeeping, maintenance, staff training, and scheduling</li>
+        <li>Pest control, plumbing, landscaping, event support</li>
+        <li>Revenue growth through corporate lodging contracts</li>
+        <li>Guest satisfaction and 5-star review strategies</li>
+      </ul>
+    </div>
+    <img src="images/smartlink-housekeeping-team.jpg" alt="SMARTLINK Housekeeping Team" data-aos="fade-left">
+  </section>
 
-    <section>
+  <section>
+    <img src="images/smartlink-guest-5-star-review.jpg" alt="SMARTLINK Guest 5 Star Review" data-aos="fade-right">
+    <div data-aos="fade-left">
+      <h2>Real Results We Deliver</h2>
+      <ul>
+        <li>Higher guest ratings and online reputation</li>
+        <li>Stronger occupancy rates year-round</li>
+        <li>Corporate partnerships for repeat business</li>
+        <li>Maximized property profitability and asset value</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div data-aos="fade-up">
       <h2>Current and Aspirational Brand Partnerships</h2>
       <div class="brand-logos">
-        <img src="images/wyndham-logo.png" alt="Wyndham">
-        <img src="images/marriott-logo.png" alt="Marriott">
-        <img src="images/ritz-carlton-logo.png" alt="Ritz-Carlton">
+        <img src="images/wyndham-logo.png" alt="Wyndham Hotels">
+        <img src="images/marriott-logo.png" alt="Marriott Hotels">
+        <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton Hotels">
         <img src="images/cbre-logo.png" alt="CBRE">
         <img src="images/greystar-logo.png" alt="Greystar">
         <img src="images/cushman-wakefield-logo.png" alt="Cushman and Wakefield">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section>
+    <div data-aos="fade-up">
       <h2>Contact Us</h2>
+      <p>Let SMARTLINK elevate your property to its highest potential.</p>
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <div class="cta">
-        <a href="#">Request a Proposal</a>
-      </div>
-    </section>
+    </div>
+  </section>
+
+  <div class="cta" data-aos="zoom-in">
+    <a href="#contact">Request a Proposal</a>
   </div>
 
   <footer>
