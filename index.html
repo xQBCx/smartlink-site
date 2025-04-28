@@ -4,112 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMARTLINK Property Management</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #0b2e59;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    header img {
-      height: 50px;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    nav a {
-      color: #C5B358;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background-color: #0b2e59;
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    section {
-      padding: 3rem 1rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #0b2e59;
-    }
-    footer {
-      background-color: #0b2e59;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-      }
-      nav {
-        margin-top: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-  <header>
-    <img src="images/smartlink-logo.png" alt="SMARTLINK Logo">
+<header class="site-header">
+  <div class="container">
+    <img src="images/smartlink-logo.png" alt="SMARTLINK Logo" class="logo">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="investor.html">Investor Gateway</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="investor-gateway.html">Investor Gateway</a></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <div class="hero">
-    <h1>SMARTLINK Property Management</h1>
+<section class="hero">
+  <div class="container">
+    <h1>Welcome to SMARTLINK</h1>
     <p>Smart Strategies, Linked Success</p>
   </div>
+</section>
 
-  <section>
-    <h2>Welcome to SMARTLINK</h2>
-    <p>
-      At SMARTLINK, we specialize in the professional management of hotels, apartment complexes, medical centers, and commercial properties.
-      Our mission is to deliver operational excellence, improve profitability, and maximize occupancy for our clients across the globe.
-    </p>
-  </section>
+<section class="about">
+  <div class="container">
+    <h2>Professional Property Management Services</h2>
+    <p>At SMARTLINK, we specialize in managing hotels, apartment complexes, medical centers, and commercial real estate. We deliver operational excellence, maximize profitability, and enhance guest satisfaction with cutting-edge systems and human-centered service.</p>
+  </div>
+</section>
 
-  <section>
-    <h2>Our Services</h2>
-    <ul>
-      <li>Hotel & Apartment Management</li>
-      <li>Staff Training & Scheduling</li>
-      <li>Maintenance & Housekeeping</li>
-      <li>Revenue Growth Strategies</li>
-      <li>Guest Experience Improvement</li>
-    </ul>
-  </section>
+<section class="brands">
+  <div class="container">
+    <h2>Current and Aspirational Brand Partnerships</h2>
+    <div class="brand-logos">
+      <img src="images/wyndham-logo.png" alt="Wyndham Hotels">
+      <img src="images/marriott-logo.png" alt="Marriott Hotels">
+      <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton">
+      <img src="images/greystar-logo.png" alt="Greystar">
+      <img src="images/cushman-wakefield-logo.png" alt="Cushman and Wakefield">
+      <img src="images/cbre-logo.png" alt="CBRE">
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 SMARTLINK Property Management | All Rights Reserved
-  </footer>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 SMARTLINK Property Management | All Rights Reserved</p>
+  </div>
+</footer>
 
 </body>
 </html>
