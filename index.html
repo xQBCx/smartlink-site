@@ -4,59 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMARTLINK Property Management</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="images/SMARTLINK-logo.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       background-color: #ffffff;
       color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
     header {
       background-color: #0b2e59;
-      padding: 1rem;
+      color: #ffffff;
       text-align: center;
+      padding: 2rem 1rem;
     }
     header img {
-      height: 60px;
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 1rem;
     }
-    nav {
-      background-color: #0b2e59;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 0.5rem;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    nav a {
+    header p {
+      margin-top: 0.5rem;
       color: #C5B358;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
+      font-size: 1.2rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      padding: 3rem 1rem;
-      max-width: 1200px;
+    section {
+      padding: 4rem 1rem;
+      max-width: 1100px;
       margin: auto;
-    }
-    .section img {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-    .logos {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
       gap: 2rem;
-      margin-top: 2rem;
     }
-    .logos img {
-      max-width: 150px;
+    section img {
+      flex: 1 1 40%;
+      max-width: 500px;
+      width: 100%;
       height: auto;
+      border-radius: 8px;
+    }
+    section div {
+      flex: 1 1 50%;
+    }
+    h2 {
+      color: #0b2e59;
+    }
+    ul {
+      list-style: inside;
+      margin-bottom: 1.5rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #C5B358;
+      color: #0b2e59;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #b4a04d;
+    }
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta a {
+      background-color: #C5B358;
+      color: #0b2e59;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
       background-color: #0b2e59;
@@ -64,75 +99,105 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 2rem;
     }
-    @media (max-width: 600px) {
-      nav a {
-        margin: 0.5rem;
-      }
-      .logos img {
-        max-width: 120px;
-      }
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 1rem;
+    }
+    .brand-logos img {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    .brand-logos img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="images/SMARTLINK-logo.png" alt="SMARTLINK Logo">
+    <h1>SMARTLINK Property Management</h1>
+    <p>Smart Strategies, Linked Success</p>
+  </header>
 
-<header>
-  <img src="images/SMARTLINK-Logo.png" alt="SMARTLINK Logo">
-</header>
+  <section>
+    <img src="images/smartlink-hotel-front-desk.jpg" alt="Front Desk">
+    <div>
+      <h2>Welcome to SMARTLINK</h2>
+      <p>We specialize in the professional management of hotels, apartments, and commercial properties. Our mission is to maximize occupancy and elevate guest experience with precision and integrity.</p>
+    </div>
+  </section>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-  <a href="investor.html">Investor Gateway</a>
-</nav>
+  <section>
+    <div>
+      <h2>Services We Offer</h2>
+      <ul>
+        <li>Hotel & Apartment Management</li>
+        <li>Staff Training & Scheduling</li>
+        <li>Maintenance & Housekeeping</li>
+        <li>Revenue Growth Strategies</li>
+        <li>Guest Experience Improvement</li>
+      </ul>
+    </div>
+    <img src="images/smartlink-housekeeping-team.jpg" alt="Housekeeping Team">
+  </section>
 
-<section class="section">
-  <h1>Welcome to SMARTLINK</h1>
-  <p>At SMARTLINK, we specialize in the professional management of hotels, apartment complexes, medical centers, and commercial properties. Our mission is to deliver operational excellence, improve profitability, and maximize occupancy for our clients across the globe.</p>
-  
-  <img src="images/front-desk-smartlink.jpg" alt="Front Desk SMARTLINK">
-</section>
+  <section>
+    <img src="images/smartlink-guest-5-star-review.jpg" alt="5 Star Review">
+    <div>
+      <h2>What Sets Us Apart</h2>
+      <ul>
+        <li>Proven increases in ratings and occupancy</li>
+        <li>Partnerships with global corporate lodging networks</li>
+        <li>Profitability improvement and asset value growth</li>
+      </ul>
+    </div>
+  </section>
 
-<section class="section">
-  <h2>Operational Excellence</h2>
-  <p>Our expert team ensures the highest standards of housekeeping, maintenance, and guest satisfaction management. Every detail matters to us.</p>
+  <section>
+    <div>
+      <h2>Conference & Event Support</h2>
+      <p>From ballrooms to boardrooms, we help properties run professional events with logistical precision and guest-focused detail.</p>
+    </div>
+    <img src="images/smartlink-hotel-conference-room.jpg" alt="Conference Room">
+  </section>
 
-  <img src="images/maintenance-staff-smartlink.jpg" alt="Maintenance Staff SMARTLINK">
-</section>
+  <section>
+    <h2 style="text-align:center">Current and Aspirational Brand Partnerships</h2>
+    <div class="brand-logos">
+      <img src="images/wyndham-logo.png" alt="Wyndham">
+      <img src="images/marriott-logo.png" alt="Marriott">
+      <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton">
+      <img src="images/cbre-logo.png" alt="CBRE">
+      <img src="images/greystar-logo.png" alt="Greystar">
+      <img src="images/cushman-wakefield-logo.png" alt="Cushman & Wakefield">
+    </div>
+  </section>
 
-<section class="section">
-  <h2>Guest Satisfaction</h2>
-  <p>We focus on achieving consistent 5-star reviews by ensuring every guest feels valued and every stay is memorable.</p>
+  <section>
+    <div>
+      <h2>Contact Us</h2>
+      <form action="mailto:jason.lopez@smartlinkmgt.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-  <img src="images/5-star-review-smartlink.jpg" alt="Guest 5 Star Review SMARTLINK">
-</section>
+  <footer>
+    &copy; 2025 SMARTLINK Property Management | All Rights Reserved
+  </footer>
 
-<section class="section">
-  <h2>Corporate Solutions</h2>
-  <p>We offer world-class conference, event, and business services to boost corporate partnerships and repeat bookings.</p>
-
-  <img src="images/conference-room-smartlink.jpg" alt="Conference Room SMARTLINK">
-</section>
-
-<section class="section">
-  <h2>Current and Aspirational Brand Partnerships</h2>
-  <div class="logos">
-    <img src="images/wyndham-logo.png" alt="Wyndham">
-    <img src="images/marriott-logo.png" alt="Marriott">
-    <img src="images/ritz-carlton-logo.png" alt="Ritz Carlton">
-    <img src="images/cbre-logo.png" alt="CBRE">
-    <img src="images/greystar-logo.png" alt="Greystar">
-    <img src="images/cushman-wakefield-logo.png" alt="Cushman & Wakefield">
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 SMARTLINK Property Management | All Rights Reserved
-</footer>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
